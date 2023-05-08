@@ -5,6 +5,7 @@ import {
   FlatList,
   useWindowDimensions,
   Text,
+  ScrollView,
 } from "react-native";
 import products from "../data/products";
 
@@ -15,31 +16,33 @@ const ProductDetailsScreen = () => {
 
   return (
     <View>
-      {/* Image Carousel */}
-      <FlatList
-        data={product.images}
-        renderItem={({ item }) => (
-          <Image
-            source={{ uri: item }}
-            style={{ width: width, aspectRatio: 1 }}
-          />
-        )}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        pagingEnabled
-      />
+      <ScrollView>
+        {/* Image Carousel */}
+        <FlatList
+          data={product.images}
+          renderItem={({ item }) => (
+            <Image
+              source={{ uri: item }}
+              style={{ width: width, aspectRatio: 1 }}
+            />
+          )}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          pagingEnabled
+        />
 
-      <View>
-        {/* Title */}
-        <Text style={styles.title}>{product.name}</Text>
+        <View>
+          {/* Title */}
+          <Text style={styles.title}>{product.name}</Text>
 
-        {/* Price */}
-        <Text style={styles.price}>{product.price}</Text>
+          {/* Price */}
+          <Text style={styles.price}>${product.price}</Text>
 
-        {/* Description */}
+          {/* Description */}
 
-        <Text style={styles.description}>{product.description}</Text>
-      </View>
+          <Text style={styles.description}>{product.description}</Text>
+        </View>
+      </ScrollView>
     </View>
   );
 };
@@ -52,6 +55,7 @@ const styles = StyleSheet.create({
   price: {
     fontWeight: "500",
     fontSize: 16,
+    letterSpacing: 2,
   },
   description: {
     marginVertical: 10,
