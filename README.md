@@ -6,3 +6,6 @@ A dedicated Sneaker E-Commerce Application for Andriod mobile ecosystem.
 - React-Native
 - Redux
 
+```
+The application is still under development.
+```
