@@ -44,12 +44,12 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   image: {
-    width: "40%",
+    width: "30%",
     aspectRatio: 1,
   },
   name: {
     fontWeight: "500",
-    fontSize: 18,
+    fontSize: 15,
   },
   size: {
     fontSize: 16,
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   itemTotal: {
-    fontSize: 16,
+    fontSize: 10,
     marginLeft: "auto",
     fontWeight: "500",
   },
